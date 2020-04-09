@@ -1,17 +1,28 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "main": "src/index.js",
+  "main": "dist/src/server.js",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon"
+    "dev": "tsc-watch --onSuccess \"node ./dist/src/server.js\"",
+    "test": "jest"
   },
   "dependencies": {
+    "@types/cors": "^2.8.6",
+    "@types/express": "^4.17.5",
+    "@types/node": "^13.11.1",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "uuidv4": "^6.0.7"
   },
   "devDependencies": {
-    "nodemon": "^2.0.2"
+    "@types/jest": "^25.2.1",
+    "@types/supertest": "^2.0.8",
+    "jest": "^25.3.0",
+    "nodemon": "^2.0.2",
+    "supertest": "^4.0.2",
+    "ts-jest": "^25.3.1",
+    "tsc-watch": "^4.2.3",
+    "typescript": "^3.8.3"
   }
 }
